@@ -11,22 +11,76 @@ import sys
 import time
 from pathlib import Path
 
-TITLE = "Human anthrax in Bangladesh"
+TITLE = "Anthrax concerns rise in northern districts At least 53 treated in Rangpur, Dinajpur and Gaibandha after showing symptoms"
 
 # ISO date, such as "2026-10-27". Leave empty if unknown; relative dates like
 # "on Monday" then stay null.
 PUBLISHED_AT = "2026-10-27"
 
-ARTICLE = """Issue 2Volume 4
-Anthrax Surveillance
-written by iedcr_nbph
-Anthrax is a zoonotic disease and endemic in the northern districts of Bangladesh. In 2019, IEDCR initiated an active anthrax surveillance in 9 upazilas of 5 districts (Sirajgonj, Pabna, Meherpur, Tangail, and Rajshahi) based on previous anthrax outbreaks. Since 2020, almost all the anthrax cases were reported from Meherpur district. Therefore, surveillance activities continue in three upazilas in Meherpur district.
+ARTICLE = """
+Anthrax infections linked to meat from sick cattle have been reported across Rangpur, Dinajpur and Gaibandha, with at least 53 people receiving treatment for symptoms over the past month.
 
-The surveillance platform is also supporting disease prevention efforts through community engagement by distributing IEC (Information, Education and Communication) materials, such as posters and trifold leaflets. Anthrax management guidelines for community intervention and campaign programs are also developed. Awareness programs were conducted at the hospital premises to increase knowledge on caring for sick animals, disposal of carcasses, and vaccination of animals. For the diagnosis of cutaneous anthrax, IEDCR initially did staining and culture, and later diagnosis is being made by RT-PCR testing.
+Health officials said the meat consumed by those affected came mainly from cattle raised in Gaibandha’s Sundarganj upazila and neighbouring Pirgacha upazila of Rangpur, where anthrax outbreaks were also reported around the same time last year.
 
-• In 2022, out of 464 suspected cases, 85 samples were tested of which 62 were positive (73%). Most of the cases could not be tested due to dry-wound (healed-lesion). One positive case was from Kamarkhond upazila of Sirajgonj district and the remaining were from Gangni upazila of Meherpur district.
+Tap here to add The Daily Star as a trusted source google-preferred-source-badge
+Of those affected, 16 people in Rangpur and Dinajpur were diagnosed with anthrax and have since recovered.
 
-• In 2023, out of 655 suspected cases, 142 samples could be tested of which 78 (57%) were positive. All of the cases were from Gangni upazila of Meherpur district."""
+In Sundarganj alone, 37 people, including 19 women, 14 men and 4 children, had received treatment for symptoms so far.
+
+The latest outbreak there spread after a sick cow was slaughtered in Bachhati village of Sabarnanda union on September 9 and its meat distributed among 100 families.
+
+Over the past two weeks, people with symptoms have been reported from five unions: Sabarnanda, Tarapur, Kanchibari, Sonaray and Ramjiban.
+
+In Rangpur, 13 people were diagnosed with anthrax in Adampara village under Chaola union of Pirgachha upazila.
+
+Rangpur Civil Surgeon Shaheen Sultana said the cases were detected on September 22.
+
+“Thirteen people, including four members of the same family, were admitted to the Pirgachha Upazila Health Complex, received treatment for ten days, and have since returned home healthy,” she said.
+
+An icddr,b team collected samples from the 13 patients and confirmed anthrax after testing, she added.
+
+Abdul Hakim, a member of Chaola Union Parishad, said the cow had been bought from Sundarganj upazila in neighbouring Gaibandha and slaughtered.
+
+Dinajpur District Livestock Officer Abdur Rahim said no new case had been detected there so far.
+
+Kamrul Hasan, Sundarganj upazila Health and Family Planning Officer, said anthrax primarily spreads to humans through contact with infected livestock, although secondary transmission can occur through contact with an infected person’s blood or pus.
+
+“Anthrax is completely curable if the patients take medicines properly,” he said.
+
+Kamrul said symptoms were first reported in Sundarganj in early September, when six residents of Kanchibari union developed fever and skin blisters after consuming meat from a sick cow.
+
+In Bachhati village, Goleza Begum, 29, said blisters developed on her hands shortly after she cooked and ate meat from the sick cow slaughtered on September 9.
+
+The Sundarganj Upazila Livestock Office collected two meat samples from Bachhati village on September 21 and sent them to the Central Disease Investigation Laboratory.
+
+Both samples tested positive for anthrax in a report received on September 23, said Sundarganj Upazila Livestock Officer KM Iftekharul Islam.
+
+Following the outbreak, six officials from the Institute of Epidemiology, Disease Control and Research and two researchers from icddr,b arrived in Sundarganj from Dhaka on September 24, Kamrul said.
+
+The IEDCR officials stressed mass awareness and veterinary clearance before sick animals are slaughtered in affected areas.
+
+Google News LinkFor all latest news, follow The Daily Star's Google News channel.
+Sundarganj UNO Iffat Jahan Tuli said awareness campaigns were being conducted through loudspeaker announcements, administrative meetings and mosque imams.
+
+Officials were also trying to locate people with symptoms who had not sought hospital treatment, she added.
+
+According to the Sundarganj upazila livestock office, the upazila has around 2.54 lakh cattle.
+
+Following a localised outbreak in October 2025, the government began a vaccination programme across 15 unions in July this year, administering 19,000 cattle vaccines so far.
+
+Official guidelines require 100 percent livestock vaccination within a 3km radius of an affected zone.
+
+KM Iftekharul Islam said 11,000 vaccine doses remained in stock, while a requisition had been submitted for another 15,000.
+
+However, icddr,b and IEDCR researchers at the upazila livestock office said anthrax could also spread through goats, sheep and buffaloes.
+
+On October 5 last year, Rozina Begum, 45, wife of Abul Hossain of Pashchim Belka village in Sundarganj, died while undergoing treatment for anthrax symptoms at Rangpur Medical College Hospital.
+
+At the time, upazila health officials and her family told local journalists that she developed blisters on her fingers after cooking and eating meat from a sick goat.
+
+Asked why other livestock were not being vaccinated, Gaibandha District Livestock Oficer Md Zobaidul Kabir said cattle were being prioritised because outbreaks in the region had historically originated from bovine sources, while other livestock were being kept under observation.
+
+"""
 
 
 def main():

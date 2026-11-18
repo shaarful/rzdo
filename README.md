@@ -790,7 +790,7 @@ For crawled articles to reach the queue by themselves, also set `LLM_QUEUE_ENABL
 ```bash
 docker compose ps                  # what is running
 docker compose logs -f rzdo        # follow the app logs
-docker compose exec db psql -U rzdo rzdo
+docker compose exec rzdodb psql -U rzdo rzdo
 ```
 
 Restarting `rzdo` interrupts any manual crawl in progress. The run is marked *interrupted*, and the next run picks up from the source's last completed crawl.

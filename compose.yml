@@ -16,7 +16,7 @@ x-app: &app
   env_file: .env
   environment:
     DJANGO_SETTINGS_MODULE: ${DJANGO_SETTINGS_MODULE:-core.settings.dev}
-    DATABASE_URL: postgres://${POSTGRES_USER:-rzdo}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-rzdo}
+    DATABASE_URL: postgres://${POSTGRES_USER:-rzdo}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@rzdodb:5432/${POSTGRES_DB:-rzdo}
     REDIS_URL: redis://redis:6379/0
     CELERY_BROKER_URL: redis://redis:6379/1
     CELERY_RESULT_BACKEND: redis://redis:6379/2
@@ -24,7 +24,7 @@ x-app: &app
     - ./secrets:/secrets:ro
 
 services:
-  db:
+  rzdodb:
     image: postgis/postgis:18-3.6
     restart: unless-stopped
     environment:
@@ -45,7 +45,7 @@ services:
     restart: "no"
     command: [python, manage.py, migrate, --noinput]
     depends_on:
-      db:
+      rzdodb:
         condition: service_healthy
 
   rzdo:
