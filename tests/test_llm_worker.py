@@ -520,6 +520,11 @@ def _serve(client, *messages):
     client.xreadgroup.side_effect = [[[STREAM, [m]]] for m in messages] + [[]]
 
 
+# run() calls close_old_connections(), which closes a connection whose autocommit is
+# off, as it is inside a normal test's rollback transaction. Tests that run the loop
+# and then query the database are therefore transactional, like the real worker.
+
+@pytest.mark.django_db(transaction=True)
 def test_once_mode_exits_when_the_stream_is_empty(article):
     client = _client()
     _serve(client, ("1-0", _fields(article)))
@@ -530,6 +535,7 @@ def test_once_mode_exits_when_the_stream_is_empty(article):
     assert worker.stats["completed"] == 1
 
 
+@pytest.mark.django_db(transaction=True)
 def test_once_mode_reports_an_outage(article):
     client = _client()
     _serve(client, ("1-0", _fields(article)))
@@ -539,6 +545,7 @@ def test_once_mode_reports_an_outage(article):
         worker.run()
 
 
+@pytest.mark.django_db(transaction=True)
 def test_service_outage_backs_off_without_touching_the_message(article):
     client = _client()
     worker = _worker(client, extract=[ServiceError("quota")], once=False)
